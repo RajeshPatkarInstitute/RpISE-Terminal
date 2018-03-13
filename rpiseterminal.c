@@ -63,4 +63,5 @@ void gotoxy(int x, int y){
        putchar(xstr[i]);
    }
    putchar('H');
+   fflush(stdout);
 }
