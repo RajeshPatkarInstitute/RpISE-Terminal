@@ -4,6 +4,7 @@
 #include "rpiseterminal.h"
 
 typedef struct termios term;
+typedef enum Color Color;
 
 void eraseDisplay(){
    putchar(27);putchar('[');putchar('2');putchar('J');
@@ -32,13 +33,13 @@ void showCursor(){
        putchar(es[i]); 
 }
 
-void setForegroundColor(enum Color foreground){
+void setForegroundColor(Color foreground){
    char es[5] = {27,'[','3',(char)foreground,'m'};
    for(int i = 0; i < 5; i++)
        putchar(es[i]);
 }
 
-void setBackgroundColor(enum Color background){
+void setBackgroundColor(Color background){
     putchar(27);putchar('[');putchar('4');putchar(background);putchar('m');
     char es[5] = {27,'[','4',(char)background,'m'};
    for(int i = 0; i < 5; i++)
