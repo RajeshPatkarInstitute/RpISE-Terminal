@@ -1,4 +1,5 @@
 #include<time.h>
+#include<stdio.h>
 #include "rpiseterminal.h"
 
 
@@ -30,14 +31,14 @@ void showCursor(){
 }
 
 void setForegroundColor(Color foreground){
-   char es[5] = {27,'[','3',foreground,'m'};
+   char es[5] = {27,'[','3',(char)foreground,'m'};
    for(int i = 0; i < 5; i++)
        putchar(es[i]);
 }
 
 void setBackgroundColor(Color background){
     putchar(27);putchar('[');putchar('4');putchar(background);putchar('m');
-    char es[5] = {27,'[','4',background,'m'};
+    char es[5] = {27,'[','4',(char)background,'m'};
    for(int i = 0; i < 5; i++)
        putchar(es[i]);
 }
