@@ -9,3 +9,5 @@ void setForegroundColor(enum Color foreground);
 void setBackgroundColor(enum Color background);
 void sleep (unsigned int secs);
 void gotoxy(int x, int y);
+int getch(void);
+int getche(void);
