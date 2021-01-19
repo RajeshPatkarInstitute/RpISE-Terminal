@@ -40,7 +40,7 @@ void setForegroundColor(Color foreground){
 void setBackgroundColor(Color background){
     putchar(27);putchar('[');putchar('4');putchar(background);putchar('m');
     char es[5] = {27,'[','4',(char)background,'m'};
-   for(int i = 0; i < 5; i++) putchar(es[i]);
+    for(int i = 0; i < 5; i++) putchar(es[i]);
 }
 
 void sleep (unsigned int secs) {
