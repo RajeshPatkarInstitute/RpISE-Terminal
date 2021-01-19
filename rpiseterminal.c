@@ -70,28 +70,22 @@ void gotoxy(int x, int y){
    fflush(stdout);
 }
 
-int getch(void)
-{
+int getkey(enum Praman syutam){
     term current, noncanonical;
     int data;
     tcgetattr(0, &current);
     noncanonical = current;
-    noncanonical.c_lflag = noncanonical.c_iflag & ~ (ICANON | ECHO);
+    noncanonical.c_lflag = noncanonical.c_iflag & ((syutam )? ~(ICANON | ECHO): ~ICANON);
     tcsetattr(0, TCSANOW, &noncanonical );
     data = getchar();
     tcsetattr(0, TCSANOW, &current);
     return data;
 }
 
-int getche(void)
-{
-    term current, noncanonical;
-    int data;
-    tcgetattr(0, &current);
-    noncanonical = current;
-    noncanonical.c_lflag = noncanonical.c_iflag & ~ICANON ;
-    tcsetattr(0, TCSANOW, &noncanonical );
-    data = getchar();
-    tcsetattr(0, TCSANOW, &current);
-    return data;
+int getch(void){
+    return getkey(tathya);
+}
+
+int getche(void){ 
+    return getkey(vitathya);
 }
