@@ -23,8 +23,7 @@ void hide(){
 
 void hideCursor(){
    char es[6] = {27,'[','?','2','5','l'};
-   for(int i = 0; i <= 5; i++) 
-       putchar(es[i]); 
+   for(int i = 0; i <= 5; i++) putchar(es[i]); 
 }
 
 void showCursor(){
@@ -35,15 +34,13 @@ void showCursor(){
 
 void setForegroundColor(Color foreground){
    char es[5] = {27,'[','3',(char)foreground,'m'};
-   for(int i = 0; i < 5; i++)
-       putchar(es[i]);
+   for(int i = 0; i < 5; i++) putchar(es[i]);
 }
 
 void setBackgroundColor(Color background){
     putchar(27);putchar('[');putchar('4');putchar(background);putchar('m');
     char es[5] = {27,'[','4',(char)background,'m'};
-   for(int i = 0; i < 5; i++)
-       putchar(es[i]);
+   for(int i = 0; i < 5; i++) putchar(es[i]);
 }
 
 void sleep (unsigned int secs) {
