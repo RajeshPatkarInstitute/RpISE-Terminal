@@ -76,7 +76,7 @@ int getch(void)
     int data;
     tcgetattr(0, &current);
     noncanonical = current;
-    noncanonical.c_lflag = noncanonical.c_iflag & ~ (ICANON | ECHO);
+    noncanonical.c_lflag = noncanonical.c_iflag & ~(ICANON | ECHO);
     tcsetattr(0, TCSANOW, &noncanonical );
     data = getchar();
     tcsetattr(0, TCSANOW, &current);
