@@ -1,7 +1,9 @@
 #include<time.h>
 #include<stdio.h>
+#include<termios.h>
 #include "rpiseterminal.h"
 
+typedef struct termios term;
 
 void eraseDisplay(){
    putchar(27);putchar('[');putchar('2');putchar('J');
@@ -30,13 +32,13 @@ void showCursor(){
        putchar(es[i]); 
 }
 
-void setForegroundColor(Color foreground){
+void setForegroundColor(enum Color foreground){
    char es[5] = {27,'[','3',(char)foreground,'m'};
    for(int i = 0; i < 5; i++)
        putchar(es[i]);
 }
 
-void setBackgroundColor(Color background){
+void setBackgroundColor(enum Color background){
     putchar(27);putchar('[');putchar('4');putchar(background);putchar('m');
     char es[5] = {27,'[','4',(char)background,'m'};
    for(int i = 0; i < 5; i++)
@@ -65,4 +67,30 @@ void gotoxy(int x, int y){
    }
    putchar('H');
    fflush(stdout);
+}
+
+int getch(void)
+{
+    term current, noncanonical;
+    int data;
+    tcgetattr(0, &current);
+    noncanonical = current;
+    noncanonical.c_lflag = noncanonical.c_iflag & ~ (ICANON | ECHO);
+    tcsetattr(0, TCSANOW, &noncanonical );
+    data = getchar();
+    tcsetattr(0, TCSANOW, &current);
+    return data;
+}
+
+int getche(void)
+{
+    term current, noncanonical;
+    int data;
+    tcgetattr(0, &current);
+    noncanonical = current;
+    noncanonical.c_lflag = noncanonical.c_iflag & ~ICANON ;
+    tcsetattr(0, TCSANOW, &noncanonical );
+    data = getchar();
+    tcsetattr(0, TCSANOW, &current);
+    return data;
 }
