@@ -32,7 +32,8 @@ A simple C library for cursor control on the Terminal.
 
 ## void sleep (unsigned int secs)
 
-    This function changes the state of the current thread to blocked state. The thread stays blocked or is in waiting for atleast the amount of seconds specified in the argument.
+    This function changes the state of the current thread to blocked state. 
+    The thread stays blocked or is in waiting for atleast the amount of seconds specified in the argument.
 
 
 ## void moveto(int x, int y)
@@ -41,8 +42,10 @@ A simple C library for cursor control on the Terminal.
 
 ## int read(void)
 
-    This function reads a key from the keyboard. Pressing Enter is not required after the data entry. The key entered is not echoed on the screen.
+    This function reads a key from the keyboard. Pressing Enter is not required after the data entry. 
+    The key entered is not echoed on the screen.
 
 ## int eread(void)
 
-    This function reads a key from the keyboard. Pressing Enter is not required after the data entry. The key entered is echoed on the screen.
+    This function reads a key from the keyboard. Pressing Enter is not required after the data entry. 
+    The key entered is echoed on the screen.
