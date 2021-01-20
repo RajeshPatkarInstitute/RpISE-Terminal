@@ -10,6 +10,6 @@ A simple C library for cursor control on the Terminal.
 * void setForegroundColor(enum Color foreground);
 * void setBackgroundColor(enum Color background);
 * void sleep (unsigned int secs);
-* void gotoxy(int x, int y);
+* void moveTo(int x, int y);
 * int getch();
 * int getche();
