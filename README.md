@@ -1,6 +1,12 @@
-# RpISE-Terminal
+# RpISE-Terminal 
 
-A simple C library for cursor control on the Terminal.
+A simple C library for cursor control on the Terminal. 
+
+
+* [download latest Pre-release v0.1.2](https://github.com/RajeshPatkarInstitute/RpISE-Terminal/releases/tag/v0.1.2)
+
+
+
 
 ## void rubs(void)
 
