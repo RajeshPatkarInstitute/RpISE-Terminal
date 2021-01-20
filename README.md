@@ -43,6 +43,6 @@ A simple C library for cursor control on the Terminal.
 
     This function reads a key from the keyboard. Pressing Enter is not required after the data entry. The key entered is not echoed on the screen.
 
-## int eread(void
+## int eread(void)
 
     This function reads a key from the keyboard. Pressing Enter is not required after the data entry. The key entered is echoed on the screen.
