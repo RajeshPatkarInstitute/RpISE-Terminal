@@ -25,23 +25,30 @@ void hide(){
    fflush(stdout);
 }
 
-void hideCursor(){
+/* Hide Cursor */
+
+void hideC(){
    char es[6] = {27,'[','?','2','5','l'};
    for(int i = 0; i <= 5; i++) putchar(es[i]); 
 }
 
-void showCursor(){
+/* Show Cursor */
+
+void showC(){
    char es[6] = {27,'[','?','2','5','h'};
    for(int i = 0; i <= 5; i++) 
        putchar(es[i]); 
 }
 
-void setForegroundColor(Color foreground){
+/* Set Foreground Color */
+
+void fColor(Color foreground){
    char es[5] = {27,'[','3',(char)foreground,'m'};
    for(int i = 0; i < 5; i++) putchar(es[i]);
 }
 
-void setBackgroundColor(Color background){
+/* Set Background Color */
+void bColor(Color background){
     putchar(27);putchar('[');putchar('4');putchar(background);putchar('m');
     char es[5] = {27,'[','4',(char)background,'m'};
     for(int i = 0; i < 5; i++) putchar(es[i]);
@@ -71,6 +78,8 @@ void moveTo(int x, int y){
    fflush(stdout);
 }
 
+/* Read a character from keyboard. pressing Enter not required */
+
 int getkey(enum Praman syutam){
     term current, noncanonical;
     int data;
@@ -83,10 +92,14 @@ int getkey(enum Praman syutam){
     return data;
 }
 
+/* Read a character Without Echo */
+
 int read(void){
     return getkey(tathya);
 }
 
-int echoread(void){ 
+/* Echo Read */
+
+int eread(void){ 
     return getkey(vitathya);
 }
