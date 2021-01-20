@@ -10,5 +10,5 @@ void fColor(enum Color foreground);
 void bColor(enum Color background);
 void sleep (unsigned int secs);
 void moveTo(int x, int y);
-int  read(void);
-int  eread(void);
+int  read();
+int  eread();
