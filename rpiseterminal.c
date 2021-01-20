@@ -6,10 +6,14 @@
 typedef struct termios term;
 typedef enum Color Color;
 
-void eraseDisplay(){
+/* Rub the content on the Screen */
+
+void rubs(){
    putchar(27);putchar('[');putchar('2');putchar('J');
    moveTo(1,1);
 }
+
+/* show a given character at the current cursor position */
 
 void show(char ch){ 
     putchar(ch); 
@@ -79,10 +83,10 @@ int getkey(enum Praman syutam){
     return data;
 }
 
-int getch(void){
+int read(void){
     return getkey(tathya);
 }
 
-int getche(void){ 
+int echoread(void){ 
     return getkey(vitathya);
 }
