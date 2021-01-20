@@ -10,7 +10,7 @@ A simple C library for cursor control on the Terminal.
 
     This function prints its argument at the current location of the cursor on the screen.
     
-### void hide();
+### void hide(void);
 
     This function hides the character being displayed at the current location of the cursor on the screen.  
     
