@@ -14,19 +14,19 @@ A simple C library for cursor control on the Terminal.
 
     This function hides the character being displayed at the current location of the cursor on the screen.
 
-## void hideC(void)
+## void hidec(void)
 
     This function makes the cursor invisible.
 
-## void showC(void)
+## void showc(void)
 
     This function makes the cursor visible.
 
-## void fColor(enum Color foreground)
+## void fcolor(enum Color foreground)
 
     This function sets the foreground color for the characters to be displayed on the screen.
 
-## void bColor(enum Color background)
+## void bcolor(enum Color background)
 
     This function sets the background color for the characters to be displayed on the screen. 
 
@@ -35,7 +35,7 @@ A simple C library for cursor control on the Terminal.
     This function changes the state of the current thread to blocked state. The thread stays blocked or is in waiting for atleast the amount of seconds specified in the argument.
 
 
-## void moveTo(int x, int y)
+## void moveto(int x, int y)
 
     This function moves the cursor to the location specified in the argument.
 
