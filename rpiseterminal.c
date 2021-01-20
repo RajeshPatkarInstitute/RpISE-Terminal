@@ -10,7 +10,7 @@ typedef enum Color Color;
 
 void rubs(){
    putchar(27);putchar('[');putchar('2');putchar('J');
-   moveTo(1,1);
+   moveto(1,1);
 }
 
 /* show a given character at the current cursor position */
@@ -27,14 +27,14 @@ void hide(){
 
 /* Hide Cursor */
 
-void hideC(){
+void hidec(){
    char es[6] = {27,'[','?','2','5','l'};
    for(int i = 0; i <= 5; i++) putchar(es[i]); 
 }
 
 /* Show Cursor */
 
-void showC(){
+void showc(){
    char es[6] = {27,'[','?','2','5','h'};
    for(int i = 0; i <= 5; i++) 
        putchar(es[i]); 
@@ -42,13 +42,13 @@ void showC(){
 
 /* Set Foreground Color */
 
-void fColor(Color foreground){
+void fcolor(Color foreground){
    char es[5] = {27,'[','3',(char)foreground,'m'};
    for(int i = 0; i < 5; i++) putchar(es[i]);
 }
 
 /* Set Background Color */
-void bColor(Color background){
+void bcolor(Color background){
     putchar(27);putchar('[');putchar('4');putchar(background);putchar('m');
     char es[5] = {27,'[','4',(char)background,'m'};
     for(int i = 0; i < 5; i++) putchar(es[i]);
@@ -59,7 +59,7 @@ void sleep (unsigned int secs) {
    while (time(0) < retTime);
 }
 
-void moveTo(int x, int y){
+void moveto(int x, int y){
    char xstr[3]={'0','0','\0'};
    char ystr[3]={'0','0','\0'}; 
    sprintf(xstr,"%d",x);
