@@ -8,7 +8,7 @@ typedef enum Color Color;
 
 void eraseDisplay(){
    putchar(27);putchar('[');putchar('2');putchar('J');
-   gotoxy(1,1);
+   moveTo(1,1);
 }
 
 void show(char ch){ 
@@ -48,7 +48,7 @@ void sleep (unsigned int secs) {
    while (time(0) < retTime);
 }
 
-void gotoxy(int x, int y){
+void moveTo(int x, int y){
    char xstr[3]={'0','0','\0'};
    char ystr[3]={'0','0','\0'}; 
    sprintf(xstr,"%d",x);
