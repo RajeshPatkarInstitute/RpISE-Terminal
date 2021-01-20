@@ -8,7 +8,7 @@ A simple C library for cursor control on the Terminal.
 
 ### void show(char ch);
 
-    This function prints the character in it's argument at the current cursor location.
+    This function prints the character in its argument at the current location of the cursor on the screen.
     
 ### void hide();
 ### void hideC();
