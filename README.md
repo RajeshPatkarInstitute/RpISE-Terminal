@@ -10,5 +10,5 @@ A simple C library for cursor control on the Terminal.
 * void setBackgroundColor(enum Color background);
 * void sleep (unsigned int secs);
 * void gotoxy(int x, int y);
-* int getch(void);
-* int getche(void);
+* int getch();
+* int getche();
