@@ -1,7 +1,9 @@
 #include<time.h>
 #include<stdio.h>
 #include<termios.h>
-#include "rpiseterminal.h"
+#include "rpic.h"
+
+enum Praman{tathya=1,vitathya=0};
 
 typedef struct termios term;
 typedef enum Color Color;
