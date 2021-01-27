@@ -1,4 +1,5 @@
-# rpiconsole     
+# rpic
+## **R**ajesh **P**atkar **I**nsitute's **C**onsole
 
 A simple C library for cursor control on the Terminal. 
 
