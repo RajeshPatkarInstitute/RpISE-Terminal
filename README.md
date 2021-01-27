@@ -13,37 +13,37 @@ A simple C library for cursor control on the Terminal.
 
     This function rubs and clears the screen.
 
-## void show(char ch)
+## void rite(char ch)
 
     This function prints its argument at the current location of the cursor on the screen.  
 
-## void hide(void)
+## void raze(void)
 
     This function hides the character being displayed at the current location of the cursor on the screen.
 
-## void hidec(void)
+## void hide(void)
 
     This function makes the cursor invisible.
 
-## void showc(void)
+## void show(void)
 
     This function makes the cursor visible.
 
-## void fcolor(enum Color foreground)
+## void fcol(enum Color foreground)
 
     This function sets the foreground color for the characters to be displayed on the screen.
 
-## void bcolor(enum Color background)
+## void bcol(enum Color background)
 
     This function sets the background color for the characters to be displayed on the screen. 
 
-## void sleep (unsigned int secs)
+## void wait ( unsigned int secs)
 
     This function changes the state of the current thread to blocked state. 
     The thread stays blocked or is in waiting for atleast the amount of seconds specified in the argument.
 
 
-## void moveto(int x, int y)
+## void move(int x, int y)
 
     This function moves the cursor to the location specified in the argument.
 
@@ -52,7 +52,7 @@ A simple C library for cursor control on the Terminal.
     This function reads a key from the keyboard. Pressing Enter is not required after the data entry. 
     The key entered is not echoed on the screen.
 
-## int eread(void)
+## int reed(void)
 
     This function reads a key from the keyboard. Pressing Enter is not required after the data entry. 
     The key entered is echoed on the screen.
