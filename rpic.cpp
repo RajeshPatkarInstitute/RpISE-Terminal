@@ -108,11 +108,17 @@ int getkey(enum Praman syutam){
 /* Read a character Without Echo */
 
 int read(void){
-    return getkey(tathya);
+    scup();
+    char ch = getkey(tathya);
+    ucup();
+    return ch;
 }
 
 /* Echo Read */
 
 int reed(void){ 
-    return getkey(vitathya);
+    scup();
+    char ch = getkey(vitathya);
+    ucup();
+    return ch;
 }
