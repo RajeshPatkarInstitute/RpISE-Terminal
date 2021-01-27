@@ -1,58 +1,63 @@
-# rpiconsole     
-
-A simple C library for cursor control on the Terminal. 
+# rpic
 
 
-* [download latest Pre-release v0.1.2](https://github.com/RajeshPatkarInstitute/RpISE-Terminal/releases/tag/v0.1.2)
-* [WebSite](https://rpiseconsole.rajeshpatkar.com)
+A simple C++ library for cursor control on the Terminal. 
 
+  This library's API offers the communication semantics for interaction with the cursor. The library's name is an acronym for
+  **R**ajesh **P**atkar **I**nsitute's **C**onsole
 
+## void rubs(void) 
 
-
-## void rubs(void)
-
-    This function rubs and clears the screen.
+  Request the cursor to clear the screen, and move to position 1,1 after completing the task.
+  **rubs** is short form for **Rub** **S**creen.
 
 ## void rite(char ch)
 
-    This function prints its argument at the current location of the cursor on the screen.  
+  Request the cursor to print the given character *ch* at it's current location and then move to the subsequent location.
+  **rite** is a short form for **write**
 
 ## void raze(void)
 
-    This function hides the character being displayed at the current location of the cursor on the screen.
+   Request the cursor to write space character at the current location and move to the subsequent location.
+   Writing space effectively erases any previous character written at the current location.
+
 
 ## void hide(void)
 
-    This function makes the cursor invisible.
+   Request the cursor to hide itself
 
 ## void show(void)
 
-    This function makes the cursor visible.
+  Request the cursor to show itself
 
 ## void fcol(enum Color foreground)
 
-    This function sets the foreground color for the characters to be displayed on the screen.
+  Request the cursor to set the foreground color of the characters it writes.
+  **fcol** is a short form for **Foreground Color**
 
 ## void bcol(enum Color background)
 
-    This function sets the background color for the characters to be displayed on the screen. 
+   Request the cursor to set te background color of the characters it writes.
+    **bcol** is a short form for **Background Color**
 
-## void wait ( unsigned int secs)
 
-    This function changes the state of the current thread to blocked state. 
-    The thread stays blocked or is in waiting for atleast the amount of seconds specified in the argument.
+## void wait(unsigned int secs)
 
+   Request the cursor to wait for a stipulated number of seconds before getting ready for work again.
 
 ## void move(int x, int y)
 
-    This function moves the cursor to the location specified in the argument.
+   Request the cursor to move to a given screen location.
 
 ## int read(void)
 
-    This function reads a key from the keyboard. Pressing Enter is not required after the data entry. 
-    The key entered is not echoed on the screen.
+   Request cursor to read a key from the keyboard. 
+   Pressing Enter is not required after the data entry. 
+   The key entered is not echoed on the screen.
 
 ## int reed(void)
 
-    This function reads a key from the keyboard. Pressing Enter is not required after the data entry. 
-    The key entered is echoed on the screen.
+   Request cursor to read a key from the keyboard.
+   Pressing Enter is not required after the data entry. 
+   The key entered is echoed on the screen.
+   The key entered is echoed on the screen.
