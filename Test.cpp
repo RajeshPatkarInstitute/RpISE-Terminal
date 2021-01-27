@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include "rpic.h"
 
-void horizontalAnimation(int x, int y, int s);
-void verticalAnimation(int x, int y, int s);
+extern void horizontalAnimation(int x, int y, int s);
+extern void verticalAnimation(int x, int y, int s);
 
 int main()
 {
@@ -17,12 +17,12 @@ int main()
     scanf("%d", &s);
     rubs();
     printf("Starting Horizontal Animation...");
-    sleep(1);
+    wait(1);
     rubs();
-    hk;
+    hide();
     horizontalAnimation(m, n, s);
-    e;
-    sk;
+    rubs();
+    show();
     printf("Enter x coordinate for V anim-->");
     scanf("%d", &m);
     printf("Enter y coordinate for V anim-->");
@@ -32,10 +32,10 @@ int main()
     rubs();
     printf("Starting Vertical Animation...");
     rubs();
-    hk;
+    hide();
     verticalAnimation(m, n, s);
     rubs();
-    sk;
+    show();
     printf("Thankyou, for using this animation program...\n");
 }
 
@@ -45,11 +45,11 @@ void horizontalAnimation(int x, int y, int s)
     do
     {
 
-        moveto(x, y);
-        show('*');
-        sleep(1);
-        moveto(x, y);
-        hide();
+        move(x, y);
+        rite('*');
+        wait(1);
+        move(x, y);
+        raze();
         x++;
         s--;
     } while (s > 0);
@@ -61,11 +61,11 @@ void verticalAnimation(int x, int y, int s)
     int i = 0;
     do
     {
-        moveto(x, y);
-        show('*');
-        sleep(1);
-        moveto(x, y);
-        hide();
+        move(x, y);
+        rite('*');
+        wait(1);
+        move(x, y);
+        raze();
         y++;
         i++;
     } while (i < s);

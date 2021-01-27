@@ -3,19 +3,7 @@
 #include<termios.h>
 #include "rpic.h"
 
-//k represents cursor.
 
-#define hk hideCursor()
-#define sk showCursor()
-#define fc(x) foregroundColor(x)
-#define bc(x) backgroundColor(x)
-#define s  show()
-#define h  hide()
-#define e  rubs()
-#define mk(x,y) moveto(x,y)
-#define r  read()
-#define re reade()
-#define d(x)  sleep(x)
 
 enum Praman{tathya=1,vitathya=0};
 
@@ -26,31 +14,31 @@ typedef enum Color Color;
 
 void rubs(){
    putchar(27);putchar('[');putchar('2');putchar('J');
-   moveto(1,1);
+   move(1,1);
 }
 
 /* show a given character at the current cursor position */
 
-void show(char ch){ 
+void rite(char ch){ 
     putchar(ch); 
     fflush(stdout); 
 }
 
-void hide(){
+void raze(){
    putchar(' ');
    fflush(stdout);
 }
 
 /* Hide Cursor */
 
-void hideCursor(){
+void hide(){
    char es[6] = {27,'[','?','2','5','l'};
    for(int i = 0; i <= 5; i++) putchar(es[i]); 
 }
 
 /* Show Cursor */
 
-void showCursor(){
+void show(){
    char es[6] = {27,'[','?','2','5','h'};
    for(int i = 0; i <= 5; i++) 
        putchar(es[i]); 
@@ -58,24 +46,24 @@ void showCursor(){
 
 /* Set Foreground Color */
 
-void foregroundColor(Color foreground){
+void fcol(Color foreground){
    char es[5] = {27,'[','3',(char)foreground,'m'};
    for(int i = 0; i < 5; i++) putchar(es[i]);
 }
 
 /* Set Background Color */
-void backgroundColor(Color background){
+void bcol(Color background){
     putchar(27);putchar('[');putchar('4');putchar(background);putchar('m');
     char es[5] = {27,'[','4',(char)background,'m'};
     for(int i = 0; i < 5; i++) putchar(es[i]);
 }
 
-void sleep (unsigned int secs) {
+void wait(unsigned int secs) {
    unsigned int retTime = time(0) + secs;
    while (time(0) < retTime);
 }
 
-void moveto(int x, int y){
+void move(int x, int y){
    char xstr[3]={'0','0','\0'};
    char ystr[3]={'0','0','\0'}; 
    sprintf(xstr,"%d",x);
@@ -116,6 +104,6 @@ int read(void){
 
 /* Echo Read */
 
-int eread(void){ 
+int reed(void){ 
     return getkey(vitathya);
 }
