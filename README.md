@@ -3,32 +3,35 @@
 
 A simple C++ library for cursor control on the Terminal. 
 
-This library's API offers the communication semantics for interaction with the cursor. The library's name is an acronym for
-**R**ajesh **P**atkar **I**nsitute's **C**onsole
+  This library's API offers the communication semantics for interaction with the cursor. The library's name is an acronym for
+  **R**ajesh **P**atkar **I**nsitute's **C**onsole
 
 ## void rubs(void) 
 
-Request the cursor to clear the screen, and move to position 1,1 after completing the task.
-**rubs** is short form for **Rub** **S**creen.
+  Request the cursor to clear the screen, and move to position 1,1 after completing the task.
+  **rubs** is short form for **Rub** **S**creen.
 
 ## void rite(char ch)
 
-    Request the cursor to print the given character *ch* at it's current location and move to the subsequent location.
+  Request the cursor to print the given character *ch* at it's current location and then move to the subsequent location.
+  **rite** is a short form for **write**
+
 ## void raze(void)
 
-    Request the cursor to write space character at the current location and move to the subsequent location.
+   Request the cursor to write space character at the current location and move to the subsequent location.
 
 ## void hide(void)
 
-    Request the cursor to hide itself
+   Request the cursor to hide itself
 
 ## void show(void)
 
-    Request the cursor to show itself
+  Request the cursor to show itself
 
 ## void fcol(enum Color foreground)
 
-   Request the cursor to set the foreground color of the characters it writes. 
+  Request the cursor to set the foreground color of the characters it writes.
+  **fcol** is a short form for **Foreground Color**
 
 ## void bcol(enum Color background)
 
