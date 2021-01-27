@@ -19,6 +19,8 @@ A simple C++ library for cursor control on the Terminal.
 ## void raze(void)
 
    Request the cursor to write space character at the current location and move to the subsequent location.
+   Writing space effectively erases any previous character written at the current location.
+
 
 ## void hide(void)
 
@@ -49,10 +51,13 @@ A simple C++ library for cursor control on the Terminal.
 
 ## int read(void)
 
-   This function reads a key from the keyboard. Pressing Enter is not required after the data entry. 
+   Request cursor to read a key from the keyboard. 
+   Pressing Enter is not required after the data entry. 
    The key entered is not echoed on the screen.
 
 ## int reed(void)
 
-    This function reads a key from the keyboard. Pressing Enter is not required after the data entry. 
-    The key entered is echoed on the screen.
+   Request cursor to read a key from the keyboard.
+   Pressing Enter is not required after the data entry. 
+   The key entered is echoed on the screen.
+   The key entered is echoed on the screen.
