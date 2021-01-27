@@ -19,10 +19,10 @@ int main()
     printf("Starting Horizontal Animation...");
     sleep(1);
     rubs();
-    hidec();
+    hk;
     horizontalAnimation(m, n, s);
-    rubs();
-    showc();
+    e;
+    sk;
     printf("Enter x coordinate for V anim-->");
     scanf("%d", &m);
     printf("Enter y coordinate for V anim-->");
@@ -32,10 +32,10 @@ int main()
     rubs();
     printf("Starting Vertical Animation...");
     rubs();
-    hidec();
+    hk;
     verticalAnimation(m, n, s);
     rubs();
-    showc();
+    sk;
     printf("Thankyou, for using this animation program...\n");
 }
 

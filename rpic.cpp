@@ -3,6 +3,20 @@
 #include<termios.h>
 #include "rpic.h"
 
+//k represents cursor.
+
+#define hk hideCursor()
+#define sk showCursor()
+#define fc(x) foregroundColor(x)
+#define bc(x) backgroundColor(x)
+#define s  show()
+#define h  hide()
+#define e  rubs()
+#define mk(x,y) moveto(x,y)
+#define r  read()
+#define re reade()
+#define d(x)  sleep(x)
+
 enum Praman{tathya=1,vitathya=0};
 
 typedef struct termios term;
@@ -29,14 +43,14 @@ void hide(){
 
 /* Hide Cursor */
 
-void hidec(){
+void hideCursor(){
    char es[6] = {27,'[','?','2','5','l'};
    for(int i = 0; i <= 5; i++) putchar(es[i]); 
 }
 
 /* Show Cursor */
 
-void showc(){
+void showCursor(){
    char es[6] = {27,'[','?','2','5','h'};
    for(int i = 0; i <= 5; i++) 
        putchar(es[i]); 
@@ -44,13 +58,13 @@ void showc(){
 
 /* Set Foreground Color */
 
-void fcolor(Color foreground){
+void foregroundColor(Color foreground){
    char es[5] = {27,'[','3',(char)foreground,'m'};
    for(int i = 0; i < 5; i++) putchar(es[i]);
 }
 
 /* Set Background Color */
-void bcolor(Color background){
+void backgroundColor(Color background){
     putchar(27);putchar('[');putchar('4');putchar(background);putchar('m');
     char es[5] = {27,'[','4',(char)background,'m'};
     for(int i = 0; i < 5; i++) putchar(es[i]);
