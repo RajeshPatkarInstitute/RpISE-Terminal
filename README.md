@@ -7,50 +7,46 @@ A simple C++ library for cursor control on the Terminal.
 * [download latest Pre-release v0.1.2](https://github.com/RajeshPatkarInstitute/RpISE-Terminal/releases/tag/v0.1.2)
 
 
-## The API has cursor as it's central actor. 
+## The API offers communication semantics for interacting with the cursor as a central abstraction.
+## void rubs(void) 
 
-## void rubs(void)
-
-    This function rubs and clears the screen.
+    Request the cursor to clear the screen, and move to position 1,1 after completing the task.**rubs** is short form for **Rub** **S**creen.
 
 ## void rite(char ch)
 
-    This function prints its argument at the current location of the cursor on the screen.  
-
+    Request the cursor to print the given character *ch* at it's current location and move to the subsequent location.
 ## void raze(void)
 
-    This function hides the character being displayed at the current location of the cursor on the screen.
+    Request the cursor to write space character at the current location and move to the subsequent location.
 
 ## void hide(void)
 
-    This function makes the cursor invisible.
+    Request the cursor to hide itself
 
 ## void show(void)
 
-    This function makes the cursor visible.
+    Request the cursor to show itself
 
 ## void fcol(enum Color foreground)
 
-    This function sets the foreground color for the characters to be displayed on the screen.
+   Request the cursor to set the foreground color of the characters it writes. 
 
 ## void bcol(enum Color background)
 
-    This function sets the background color for the characters to be displayed on the screen. 
+   Request the cursor to set te background color of the characters it writes.
 
 ## void wait(unsigned int secs)
 
-    This function changes the state of the current thread to blocked state. 
-    The thread stays blocked or is in waiting for atleast the amount of seconds specified in the argument.
-
+   Request the cursor to wait for a stipulated number of seconds before it is ready to work again.
 
 ## void move(int x, int y)
 
-    This function moves the cursor to the location specified in the argument.
+   Request the cursor to move to a given screen location.
 
 ## int read(void)
 
-    This function reads a key from the keyboard. Pressing Enter is not required after the data entry. 
-    The key entered is not echoed on the screen.
+   This function reads a key from the keyboard. Pressing Enter is not required after the data entry. 
+   The key entered is not echoed on the screen.
 
 ## int reed(void)
 
