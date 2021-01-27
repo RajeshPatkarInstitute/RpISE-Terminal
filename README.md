@@ -60,4 +60,3 @@ A simple C++ library for cursor control on the Terminal.
    Request cursor to read a key from the keyboard.
    Pressing Enter is not required after the data entry. 
    The key entered is echoed on the screen.
-   The key entered is echoed on the screen.
