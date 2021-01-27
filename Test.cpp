@@ -45,7 +45,6 @@ void horizontalAnimation(int x, int y, int s)
         move(x, y);
         rite('*');
         wait(1);
-        move(x, y);
         raze();
         x++;
         s--;
@@ -60,7 +59,6 @@ void verticalAnimation(int x, int y, int s)
         move(x, y);
         rite('*');
         wait(1);
-        move(x, y);
         raze();
         y++;
         i++;

@@ -13,12 +13,12 @@ A simple C++ library for cursor control on the Terminal.
 
 ## void rite(char ch)
 
-  Request the cursor to print the given character *ch* at it's current location and then move to the subsequent location.
+  Request the cursor to print the given character *ch* at it's current location.
   **rite** is a short form for **write**
 
 ## void raze(void)
 
-   Request the cursor to write space character at the current location and move to the subsequent location.
+   Request the cursor to write space character at the current location.
    Writing space effectively erases any previous character written at the current location.
 
 

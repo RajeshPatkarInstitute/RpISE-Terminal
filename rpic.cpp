@@ -8,7 +8,7 @@
 enum Praman{tathya=1,vitathya=0};
 
 typedef struct termios term;
-typedef enum Color Color;
+typedef enum Col Color;
 
 /* Rub the content on the Screen */
 
@@ -17,16 +17,25 @@ void rubs(){
    move(1,1);
 }
 
+void scup(){
+    putchar(27);putchar('[');putchar('s');
+}
+
+void ucup(){
+    putchar(27);putchar('[');putchar('u');
+}
+
 /* show a given character at the current cursor position */
 
 void rite(char ch){ 
+    scup();
     putchar(ch); 
+    ucup();
     fflush(stdout); 
 }
 
 void raze(){
-   putchar(' ');
-   fflush(stdout);
+    rite(' ');
 }
 
 /* Hide Cursor */
@@ -46,13 +55,13 @@ void show(){
 
 /* Set Foreground Color */
 
-void fcol(Color foreground){
+void fcol(Col foreground){
    char es[5] = {27,'[','3',(char)foreground,'m'};
    for(int i = 0; i < 5; i++) putchar(es[i]);
 }
 
 /* Set Background Color */
-void bcol(Color background){
+void bcol(Col background){
     putchar(27);putchar('[');putchar('4');putchar(background);putchar('m');
     char es[5] = {27,'[','4',(char)background,'m'};
     for(int i = 0; i < 5; i++) putchar(es[i]);
