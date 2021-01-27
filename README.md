@@ -1,4 +1,4 @@
-# rpic
+## rpic
 
 A simple C++ library for cursor control on the Terminal.
 
@@ -32,6 +32,19 @@ A simple C++ library for cursor control on the Terminal.
 
   Request the cursor to set the foreground color of the characters it writes.
   **fcol** is a short form for **Foreground Color**
+  This setting is applicable to the subsequent write operations. It has no effect on the previous writes.
+  The foreground color once set remains so until updated to a new value.
+
+  | Name   | Value |
+  |--------|-------|
+  |black   |0      |
+  |red     |1     |
+  |green   |2      |
+  |yellow  |3      |
+  |blue    |4      |
+  |magenta |5      |
+  |cyan    |6      |
+  |white   |7      |
 
 ### void bcol(enum Color background)
 
