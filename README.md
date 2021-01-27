@@ -1,12 +1,11 @@
 # rpic
 
-
-A simple C++ library for cursor control on the Terminal. 
+A simple C++ library for cursor control on the Terminal.
 
   This library's API offers the communication semantics for interaction with the cursor. The library's name is an acronym for
   **R**ajesh **P**atkar **I**nsitute's **C**onsole
 
-## void rubs(void) 
+## void rubs(void)
 
   Request the cursor to clear the screen, and move to position 1,1 after completing the task.
   **rubs** is short form for **Rub** **S**creen.
@@ -20,7 +19,6 @@ A simple C++ library for cursor control on the Terminal.
 
    Request the cursor to write space character at the current location.
    Writing space effectively erases any previous character written at the current location.
-
 
 ## void hide(void)
 
@@ -40,7 +38,6 @@ A simple C++ library for cursor control on the Terminal.
    Request the cursor to set te background color of the characters it writes.
     **bcol** is a short form for **Background Color**
 
-
 ## void wait(unsigned int secs)
 
    Request the cursor to wait for a stipulated number of seconds before getting ready for work again.
@@ -51,12 +48,12 @@ A simple C++ library for cursor control on the Terminal.
 
 ## int read(void)
 
-   Request cursor to read a key from the keyboard. 
-   Pressing Enter is not required after the data entry. 
+   Request cursor to read a key from the keyboard.
+   Pressing Enter is not required after the data entry.
    The key entered is not echoed on the screen.
 
 ## int reed(void)
 
    Request cursor to read a key from the keyboard.
-   Pressing Enter is not required after the data entry. 
+   Pressing Enter is not required after the data entry.
    The key entered is echoed on the screen.
