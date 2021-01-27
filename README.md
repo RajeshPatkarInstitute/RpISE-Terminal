@@ -1,13 +1,14 @@
 # rpic
-**R**ajesh **P**atkar **I**nsitute's **C**onsole
+
 
 A simple C++ library for cursor control on the Terminal. 
-
 
 * [download latest Pre-release v0.1.2](https://github.com/RajeshPatkarInstitute/RpISE-Terminal/releases/tag/v0.1.2)
 
 
-### The API offers communication semantics for interacting with the cursor as a central abstraction.
+#### This API offers communication semantics for interacting with the cursor as a central abstraction. The name of the library is derived from the first letters of
+**R**ajesh **P**atkar **I**nsitute's **C**onsole
+
 ## void rubs(void) 
 
 Request the cursor to clear the screen, and move to position 1,1 after completing the task.
