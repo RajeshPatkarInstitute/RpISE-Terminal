@@ -6,7 +6,6 @@ extern void verticalAnimation(int x, int y, int s);
 
 int main()
 {
-
     rubs();
     int m, n, s;
     printf("Enter x coordinate for H anim-->");
@@ -40,11 +39,9 @@ int main()
 }
 
 void horizontalAnimation(int x, int y, int s)
-
 {
     do
     {
-
         move(x, y);
         rite('*');
         wait(1);
@@ -56,7 +53,6 @@ void horizontalAnimation(int x, int y, int s)
 }
 
 void verticalAnimation(int x, int y, int s)
-
 {
     int i = 0;
     do
