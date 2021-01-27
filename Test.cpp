@@ -1,20 +1,72 @@
+#include<stdio.h>
 #include "rpic.h"
 
-int main(){
+void horizontalAnimation(int x, int y, int s);
+void verticalAnimation(int x, int y, int s);
+
+int main()
+{
+
     rubs();
-    int x = 5;
-    int y = 5;
-    moveto(x,y);
-    show('*');
-    int i = 0;
-    while(i < 10){
-        hide();
-        x++;y++;
-        i++;
-        moveto(x,y);
+    int m, n, s;
+    printf("Enter x coordinate for H anim-->");
+    scanf("%d", &m);
+    printf("Enter y coordinate for H anim-->");
+    scanf("%d", &n);
+    printf("Enter steps-->");
+    scanf("%d", &s);
+    rubs();
+    printf("Starting Horizontal Animation...");
+    sleep(1);
+    rubs();
+    hidec();
+    horizontalAnimation(m, n, s);
+    rubs();
+    showc();
+    printf("Enter x coordinate for V anim-->");
+    scanf("%d", &m);
+    printf("Enter y coordinate for V anim-->");
+    scanf("%d", &n);
+    printf("Enter steps-->");
+    scanf("%d", &s);
+    rubs();
+    printf("Starting Vertical Animation...");
+    rubs();
+    hidec();
+    verticalAnimation(m, n, s);
+    rubs();
+    showc();
+    printf("Thankyou, for using this animation program...\n");
+}
+
+void horizontalAnimation(int x, int y, int s)
+
+{
+    do
+    {
+
+        moveto(x, y);
         show('*');
         sleep(1);
-    }
-    read();
-    rubs();
+        moveto(x, y);
+        hide();
+        x++;
+        s--;
+    } while (s > 0);
+}
+
+void verticalAnimation(int x, int y, int s)
+
+{
+    int i = 0;
+    do
+    {
+        moveto(x, y);
+        show('*');
+        sleep(1);
+        moveto(x, y);
+        hide();
+        y++;
+        i++;
+    } while (i < s);
 }
