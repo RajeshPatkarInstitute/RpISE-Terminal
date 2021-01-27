@@ -28,7 +28,7 @@ A simple C++ library for cursor control on the Terminal.
 
   Request the cursor to show itself
 
-### void fcol(enum Color foreground)
+### void fcol(enum Col foreground)
 
   Request the cursor to set the foreground color of the characters it writes.
   **fcol** is a short form for **Foreground Color**
@@ -46,7 +46,7 @@ A simple C++ library for cursor control on the Terminal.
   | cyan | 6 |
   | white | 7 |
 
-### void bcol(enum Color background)
+### void bcol(enum Col background)
 
    Request the cursor to set te background color of the characters it writes.
    **bcol** is a short form for **Background Color**
