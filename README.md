@@ -36,7 +36,7 @@ A simple C library for cursor control on the Terminal.
 
     This function sets the background color for the characters to be displayed on the screen. 
 
-## void wait ( unsigned int secs)
+## void wait(unsigned int secs)
 
     This function changes the state of the current thread to blocked state. 
     The thread stays blocked or is in waiting for atleast the amount of seconds specified in the argument.
