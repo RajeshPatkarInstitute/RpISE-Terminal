@@ -36,10 +36,12 @@ A simple C++ library for cursor control on the Terminal.
 ## void bcol(enum Color background)
 
    Request the cursor to set te background color of the characters it writes.
+    **bcol** is a short form for **Background Color**
+
 
 ## void wait(unsigned int secs)
 
-   Request the cursor to wait for a stipulated number of seconds before it is ready to work again.
+   Request the cursor to wait for a stipulated number of seconds before getting ready for work again.
 
 ## void move(int x, int y)
 
