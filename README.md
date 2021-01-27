@@ -3,10 +3,7 @@
 
 A simple C++ library for cursor control on the Terminal. 
 
-* [download latest Pre-release v0.1.2](https://github.com/RajeshPatkarInstitute/RpISE-Terminal/releases/tag/v0.1.2)
-
-
-#### This API offers communication semantics for interacting with the cursor as a central abstraction. The name of the library is derived from the first letters of
+This library's API offers the communication semantics for interaction with the cursor. The library's name is an acronym for
 **R**ajesh **P**atkar **I**nsitute's **C**onsole
 
 ## void rubs(void) 
