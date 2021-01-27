@@ -10,7 +10,7 @@ A simple C++ library for cursor control on the Terminal.
 ## The API offers communication semantics for interacting with the cursor as a central abstraction.
 ## void rubs(void) 
 
-    Request the cursor to clear the screen, and move to position 1,1 after completing the task.**rubs** is short form for **Rub** **S**creen.
+Request the cursor to clear the screen, and move to position 1,1 after completing the task. **rubs** is short form for **Rub** **S**creen.
 
 ## void rite(char ch)
 
