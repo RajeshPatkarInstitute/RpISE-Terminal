@@ -12,7 +12,7 @@ A simple C++ library for cursor control on the Terminal.
   
 ### void rubl(void)
 
-  Request the cursor to clear the given line
+  Request the cursor to clear the given line. 
   **rubl** is short form for **Rub** **L**ine.
 
 
