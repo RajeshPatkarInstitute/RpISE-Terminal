@@ -1,6 +1,8 @@
 #include "rpic.h"
+#include <stdio.h>
 
 int main(){
+    hide();
     rubs();
     move(5,5);
     rite('*');
@@ -25,5 +27,11 @@ int main(){
         rite('$');down();wait(1);
     }
     attr('0');
-
+    printf("Hello\n");
+    printf("bye\n");
+    printf("good");
+    read();
+    rubl();
+    read();
+    show();
 }

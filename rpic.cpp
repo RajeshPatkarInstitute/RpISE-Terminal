@@ -154,7 +154,9 @@ int getkey(enum Praman syutam){
 /* Read a character Without Echo */
 
 int read(void){
+    scup();
     char ch = getkey(tathya);
+    ucup();
     return ch;
 }
 
