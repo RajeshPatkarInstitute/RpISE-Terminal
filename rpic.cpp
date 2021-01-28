@@ -108,9 +108,7 @@ int getkey(enum Praman syutam){
 /* Read a character Without Echo */
 
 int read(void){
-    scup();
     char ch = getkey(tathya);
-    ucup();
     return ch;
 }
 
@@ -121,4 +119,24 @@ int reed(void){
     char ch = getkey(vitathya);
     ucup();
     return ch;
+}
+
+void up(){
+    putchar(27);putchar('[');putchar('A');
+}
+
+void down(){
+    putchar(27);putchar('[');putchar('B');
+}
+
+void home(){
+    putchar(27);putchar('[');putchar('H');
+}
+
+void back(){
+    putchar(27);putchar('[');putchar('D');
+}
+
+void head(){
+    putchar(27);putchar('[');putchar('C');
 }

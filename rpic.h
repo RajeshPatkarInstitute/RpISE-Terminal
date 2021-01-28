@@ -12,3 +12,8 @@ void wait(unsigned int secs);
 void move(int x, int y);
 int  read();
 int  reed();
+void up();
+void down();
+void head();
+void back();
+void home();
