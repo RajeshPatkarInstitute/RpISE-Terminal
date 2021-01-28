@@ -9,17 +9,21 @@ int main(){
     rite(ch);
     read();
     move(10,10);
+    attr('5');attr('4');
     for(int i=0 ;i < 5; i++){
         rite('$');head();wait(1);
     }
     for(int i=0 ;i < 5; i++){
         rite('$');up();wait(1);
     }
-    for(int i=0 ;i < 5; i++){
-        rite('$');down();wait(1);
-    }
+    attr('7');
     for(int i=0 ;i < 5; i++){
         rite('$');back();wait(1);
     }
+    attr('2');
+    for(int i=0 ;i < 5; i++){
+        rite('$');down();wait(1);
+    }
+    attr('0');
 
 }

@@ -17,6 +17,27 @@ void rubs(){
    move(1,1);
 }
 
+void rubl(){
+    putchar(27);putchar('[');putchar('2');putchar('K');
+}
+
+void rubu(){
+    putchar(27);putchar('[');putchar('1');putchar('J');
+}
+
+void rubd(){
+    putchar(27);putchar('[');putchar('J');
+}
+
+void rubf(){
+    putchar(27);putchar('[');putchar('K');
+}
+
+void rubb(){
+    putchar(27);putchar('[');putchar('1');putchar('K');
+}
+
+
 void scup(){
     putchar(27);putchar('[');putchar('s');
 }
@@ -24,6 +45,31 @@ void scup(){
 void ucup(){
     putchar(27);putchar('[');putchar('u');
 }
+/*
+void attr(char c[15]){
+    char attrlist[15];
+    int i = 0;
+    char ch = c[0];
+    while(ch != '\0' && i < 15){
+        attrlist[i++] = ch;
+        attrlist[i++] = ';';
+    }
+    attrlist[i] = '\0';
+    putchar(27);putchar('[');
+    i = 0;
+    ch = attrlist[0];
+    while(ch != '\0' && i < 15){
+        putchar(ch);
+        i++;
+    }
+    putchar('m');
+}
+*/
+void attr(char ch){
+    putchar(27);putchar('[');
+    putchar(ch);putchar('m');
+}
+
 
 /* show a given character at the current cursor position */
 
