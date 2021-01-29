@@ -4,6 +4,8 @@ A simple C++ library for cursor control on the Terminal.
 
   This library's API offers the communication semantics for interaction with the cursor. The library's name is an acronym for
   **R**ajesh **P**atkar **I**nsitute's **C**onsole
+  
+  <img src="rpic instructionset.png">
 
 ### void rubs(void)
 
